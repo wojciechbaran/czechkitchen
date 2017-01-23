@@ -1,8 +1,6 @@
 class SiteController < ApplicationController
   def index
   end
-  def order
-  end
   def menu
   	@starters = Food.where(food_type: 'Starters')
   	@courses = Food.where(food_type: 'Main Courses')

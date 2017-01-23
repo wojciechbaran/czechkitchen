@@ -11,7 +11,7 @@ class Admin < ApplicationRecord
 	def encrypt_password
 		if password.present?
 			require 'digest/sha1'
-			encrypted_password= Digest::SHA1.hexdigest(password)
+			password= Digest::SHA1.hexdigest(password)
 		end
 	end
 	def clear_password

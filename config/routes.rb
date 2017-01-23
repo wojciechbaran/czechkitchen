@@ -1,8 +1,14 @@
 Rails.application.routes.draw do
   get 'site/index'
-  get 'site/order'
   get 'site/menu'
-  
+
+  get 'orders/starters'
+  get 'orders/soups'
+  get 'orders/courses'
+  get 'orders/desserts'
+  get 'orders/beverages'
+
+
   root 'site#index'
   resources :orders
   resources :admins

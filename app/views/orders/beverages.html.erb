@@ -1,0 +1,6 @@
+<h1>Chosse Beverages and Beers</h1>
+<%= render 'chosse', foods: @beverages %>
+<p>Beers:</p>
+<%= render 'chosse', foods: @beers %>
+
+<%= link_to 'Next->Your Data', :controller => :orders, :action => :new %>
