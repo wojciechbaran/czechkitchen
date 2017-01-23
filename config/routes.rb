@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'site/index'
+  root 'site#index'
   resources :orders
   resources :admins
   resources :foods
