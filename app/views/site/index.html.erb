@@ -1,2 +1,16 @@
-<h1>Site#index</h1>
-<p>Find me in app/views/site/index.html.erb</p>
+<div class="jumbotron">
+    <div class="container">
+        <h1>Welcome in Czech Kitchen</h1>
+    </div>
+</div>
+<div class="container">
+	<div class="col-md-6">
+		<%= link_to 'Quick order', :controller => :site, :action => :order %>
+	</div>
+	<div class="col-md-6">
+		<%= link_to 'see our menu', :controller => :site, :action => :menu %>
+	</div>
+</div>
+///
+select starters -> soup -> main courses -> dessert -> bavrage or beer
+/// see our menu

@@ -18,9 +18,15 @@
 
   <div class="field">
     <%= f.label :food_type %>
-    <%= f.text_field :food_type %>
+    <%= f.select :food_type, options_for_select([
+        ["Starters"],
+        ["Main Course"], 
+        ["Soup"],
+        ["Dessert"],
+        ["Beverages"],
+        ["Beer"]
+      ]) %>
   </div>
-
   <div class="field">
     <%= f.label :price %>
     <%= f.text_field :price %>
