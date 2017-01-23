@@ -1,1 +1,38 @@
-menumenu
+<div class="container">
+    <h3>Starters</h3>
+    <ul>
+        <% @starters.each do |food| %>
+        <li><%= food.name %> : <%= food.price %>Kc</li>
+        <% end %>
+    </ul>
+    <h3>Soups</h3>
+    <ul>
+        <% @soups.each do |food| %>
+        <li><%= food.name %> : <%= food.price %>Kc</li>
+        <% end %>
+    </ul>
+    <h3>Main Courses</h3>
+    <ul>
+        <% @courses.each do |food| %>
+        <li><%= food.name %> : <%= food.price %>Kc</li>
+        <% end %>
+    </ul>
+    <h3>Desserts</h3>
+    <ul>
+        <% @desserts.each do |food| %>
+        <li><%= food.name %> : <%= food.price %>Kc</li>
+        <% end %>
+    </ul>
+    <h3>Beverages</h3>
+    <ul>
+        <% @beverages.each do |food| %>
+        <li><%= food.name %> : <%= food.price %>Kc</li>
+        <% end %>
+    </ul>
+    <h3>Beers</h3>
+    <ul>
+        <% @beers.each do |food| %>
+        <li><%= food.name %> : <%= food.price %>Kc</li>
+        <% end %>
+    </ul>
+</div>

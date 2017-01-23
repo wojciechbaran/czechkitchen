@@ -20,12 +20,12 @@
     <%= f.label :food_type %>
     <%= f.select :food_type, options_for_select([
         ["Starters"],
-        ["Main Course"], 
-        ["Soup"],
-        ["Dessert"],
+        ["Main Courses"], 
+        ["Soups"],
+        ["Desserts"],
         ["Beverages"],
-        ["Beer"]
-      ]) %>
+        ["Beers"]
+      ], food.food_type) %>
   </div>
   <div class="field">
     <%= f.label :price %>
