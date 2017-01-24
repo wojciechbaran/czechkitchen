@@ -1,6 +1,23 @@
 <h1>Chosse Beverages and Beers</h1>
-<%= render 'chosse', foods: @beverages %>
-<p>Beers:</p>
-<%= render 'chosse', foods: @beers %>
+<%= form_for([@order, @order.order_food.build]) do |f| %>
 
-<%= link_to 'Next->Your Data', :controller => :orders, :action => :new %>
+<table class="table">
+<thead>
+	<tr><td>Beverages</td><td>Price</td><td>Amount</td></tr>
+</thead>
+<tbody>
+    <% @beverages.each do |food| %>
+    <tr><td><%= food.name %> </td><td><%= food.price %>Kc</td><td><%= f.radio_button :food_name, food.name %></td></tr>
+    <% end %>
+    <tr><td>Beers</td><td>Price</td><td>Amount</td></tr>
+    <% @beers.each do |food| %>
+    <tr><td><%= food.name %> </td><td><%= food.price %>Kc</td><td><%= f.radio_button :food_name, food.name %></td></tr>
+    <% end %>
+    <tr><td COLSPAN=2>Skip</td><td><%= f.radio_button :food_name, 'skip', :checked=>true %></td></tr>
+</tbody>
+</table>
+ <div class="actions">
+    <%= f.submit 'Finish' %>
+  </div>
+  <%= f.hidden_field :nextpage, :value =>'show' %>
+<% end %>

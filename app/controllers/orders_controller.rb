@@ -7,22 +7,33 @@ class OrdersController < ApplicationController
 
   def starters
     @foods = Food.where(food_type: 'Starters')
+    @order = Order.find(params[:order_id])
   end
+
   def soups
     @foods = Food.where(food_type: 'Soups')
+    @order = Order.find(params[:order_id])
   end
   def courses
     @foods = Food.where(food_type: 'Main Courses')
+    @order = Order.find(params[:order_id])
   end
   def desserts
     @foods = Food.where(food_type: 'Desserts')
+    @order = Order.find(params[:order_id])
   end
   def beverages
     @beverages = Food.where(food_type: 'Beverages')
     @beers = Food.where(food_type: 'Beers')
+    @order = Order.find(params[:order_id])
   end
 
   def show
+    if params[:order_id]
+      @order = Order.find(params[:order_id])
+    else
+      @order = Order.find(params[:id])
+    end
   end
 
   def new
@@ -37,7 +48,7 @@ class OrdersController < ApplicationController
 
     respond_to do |format|
       if @order.save
-        format.html { redirect_to :action => 'starters', notice: 'Order was successfully created.' }
+        format.html { redirect_to :action => 'starters', notice: 'Order was successfully created.', order_id: @order.id }
         format.json { render :show, status: :created, location: @order }
       else
         format.html { render :new }
@@ -75,5 +86,8 @@ class OrdersController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def order_params
       params.require(:order).permit(:name, :surname, :street, :number, :city, :phone)
+    end
+    def order_food_params
+      params.require(:order_food).permit(:food_name, :order)
     end
 end

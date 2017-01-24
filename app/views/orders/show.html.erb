@@ -29,6 +29,12 @@
   <strong>Phone:</strong>
   <%= @order.phone %>
 </p>
+<h2>Food list:</h2>
+<ul>
+<% @order.order_food.each do |item| %>
+    <li><%= item.food_name %></li>
+<% end %>
+</ul>
 
 <%= link_to 'Edit', edit_order_path(@order) %> |
 <%= link_to 'Back', orders_path %>
