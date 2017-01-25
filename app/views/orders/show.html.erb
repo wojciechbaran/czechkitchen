@@ -1,40 +1,20 @@
-<p id="notice"><%= notice %></p>
+<section id="intro" class="main">
 
-<p>
-  <strong>Name:</strong>
-  <%= @order.name %>
-</p>
+<h1>Your order</h1>
 
-<p>
-  <strong>Surname:</strong>
-  <%= @order.surname %>
-</p>
+<h3>Your data</h3>
 
-<p>
-  <strong>Street:</strong>
-  <%= @order.street %>
-</p>
+<p><%= @order.name %> <%= @order.surname %></p>
+<p><%= @order.street %> <%= @order.number %></p>
+<p><%= @order.city %></p>
+<p>Phone: <%= @order.phone %></p>
 
-<p>
-  <strong>Number:</strong>
-  <%= @order.number %>
-</p>
-
-<p>
-  <strong>City:</strong>
-  <%= @order.city %>
-</p>
-
-<p>
-  <strong>Phone:</strong>
-  <%= @order.phone %>
-</p>
 <h2>Food list:</h2>
-<ul>
+<table>
 <% @order.order_food.each do |item| %>
-    <li><%= item.food_name %></li>
+    <tr><td><%= item.food_name %></td></tr>
 <% end %>
-</ul>
+</table>
 
-<%= link_to 'Edit', edit_order_path(@order) %> |
-<%= link_to 'Back', orders_path %>
+<%= link_to 'Back', root_url  , class: "button big" %>
+</section>

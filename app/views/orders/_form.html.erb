@@ -1,14 +1,6 @@
 <%= form_for(order) do |f| %>
   <% if order.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(order.errors.count, "error") %> prohibited this order from being saved:</h2>
-
-      <ul>
-      <% order.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
+   
   <% end %>
 
   <div class="field">
@@ -42,6 +34,6 @@
   </div>
 
   <div class="actions">
-    <%= f.submit 'Next->Starters' %>
+    <%= f.submit 'Next->Starters', class: "button1" %>
   </div>
 <% end %>

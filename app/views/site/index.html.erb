@@ -1,16 +1,7 @@
-<div class="jumbotron">
-    <div class="container">
-        <h1>Welcome in Czech Kitchen</h1>
-    </div>
-</div>
-<div class="container">
-	<div class="col-md-6">
-		<%= link_to 'Quick order', :controller => :orders, :action => :new %>
-	</div>
-	<div class="col-md-6">
-		<%= link_to 'see our menu', :controller => :site, :action => :menu %>
-	</div>
-</div>
-///
-select starters -> soup -> main courses -> dessert -> bavrage or beer
-/// see our menu
+<section id="intro" class="main">    
+    <ul class="actions">
+      <li><%= link_to 'Quick order', {:controller => :orders, :action => :new}, class: "button big" %></li>
+      <li><%= link_to 'see our menu',{ :controller => :site, :action => :menu}, class: "button big" %></li>
+    </ul>    
+</section>
+  

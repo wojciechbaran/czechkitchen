@@ -1,3 +1,4 @@
+<section id="intro" class="main">
 <h1>Chosse Soups</h1>
 <%= form_for([@order, @order.order_food.build]) do |f| %>
 <table class="table">
@@ -16,3 +17,4 @@
   </div>
   <%= f.hidden_field :nextpage, :value =>'courses' %>
 <% end %>
+</section>
