@@ -1,13 +1,9 @@
+<section id="intro" class="main">
 <p id="notice"><%= notice %></p>
 
 <p>
   <strong>Login:</strong>
   <%= @admin.login %>
-</p>
-
-<p>
-  <strong>Password:</strong>
-  <%= @admin.password %>
 </p>
 
 <p>
@@ -19,6 +15,7 @@
   <strong>Surname:</strong>
   <%= @admin.surname %>
 </p>
-
+<%= @admin.encrypted_password %>
 <%= link_to 'Edit', edit_admin_path(@admin) %> |
 <%= link_to 'Back', admins_path %>
+</section>

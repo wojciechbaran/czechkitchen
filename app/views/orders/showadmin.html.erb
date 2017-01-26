@@ -1,0 +1,18 @@
+<section id="intro" class="main">
+<p id="notice"><%= notice %></p>
+<h2>Order address</h2>
+<p><%= @order.name %> <%= @order.surname %></p>
+<p><%= @order.street %> <%= @order.number %></p>
+<p><%= @order.city %></p>
+<p>Phone: <%= @order.phone %></p>
+
+<h2>Food list:</h2>
+<table>
+<% @order.order_food.each do |item| %>
+    <tr><td><%= item.food_name %></td></tr>
+<% end %>
+</table>
+
+<%= link_to 'Edit', edit_order_path(@order) %> |
+<%= link_to 'Back', orders_path %>
+</section>

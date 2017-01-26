@@ -10,15 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170123222503) do
+ActiveRecord::Schema.define(version: 20170125153628) do
 
   create_table "admins", force: :cascade do |t|
     t.string   "login"
-    t.string   "password"
+    t.string   "encrypted_password"
     t.string   "name"
     t.string   "surname"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
   end
 
   create_table "foods", force: :cascade do |t|

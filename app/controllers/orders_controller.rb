@@ -35,6 +35,9 @@ class OrdersController < ApplicationController
       @order = Order.find(params[:id])
     end
   end
+  def showadmin
+    
+  end
 
   def new
     @order = Order.new

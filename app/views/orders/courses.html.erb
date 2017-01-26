@@ -1,5 +1,5 @@
 <section id="intro" class="main">
-<h1>Chosse Desserts</h1>
+<h1>Chosse Main Courses</h1>
 <%= form_for([@order, @order.order_food.build]) do |f| %>
 
 <table class="table">
@@ -14,7 +14,12 @@
 </tbody>
 </table>
  <div class="actions">
-    <%= f.submit 'Next->Desserts' %>
+ <div class="actions">
+	 <%= button_tag(type: 'submit', class: "button big") do %>
+	 Next <i class="fa fa-arrow-right"></i> Desserts
+	<% end %>
+    
+  </div>
   </div>
   <%= f.hidden_field :nextpage, :value =>'desserts' %>
 <% end %>

@@ -14,7 +14,12 @@
 </tbody>
 </table>
  <div class="actions">
-    <%= f.submit 'Next->Beverages' %>
+ <div class="actions">
+	 <%= button_tag(type: 'submit', class: "button big") do %>
+	 Next <i class="fa fa-arrow-right"></i> Beverages
+	<% end %>
+    
+  </div>
   </div>
   <%= f.hidden_field :nextpage, :value =>'beverages' %>
 <% end %>

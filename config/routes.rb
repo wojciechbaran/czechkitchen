@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
+  get 'site/login'
+
+  get 'site/adm'
   get 'site/index'
   get 'site/menu'
 
+  get 'orders/showadmin'
   get 'orders/starters'
   get 'orders/soups'
   get 'orders/courses'

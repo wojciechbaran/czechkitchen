@@ -6,19 +6,21 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <%= stylesheet_link_tag "font-awsome.min.css" %>
+    
   </head>
 
   <body>
     <header id="header" class="alt">
       <div class="inner">
         <h1>Welcome to Czech Restaurant</h1>
-        <p>cośtamcośtam</p>
+        <p>coś fajnego</p>
       </div>
     </header>
     <div id="wrapper">
       <%= yield %>
     <footer id="footer">
+      <span><%= link_to 'Start', root_url %></span>
+      <span><%= link_to 'Login', :controller => :site, :action => :login %></span>
       <p class="copyright">&copy; Czech Restaurant. Created by: Baran Wojciech, Ciupiński Dariusz, Paprocka Ida, Maziarz Szymon</p>
     </footer>
 

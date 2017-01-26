@@ -9,4 +9,8 @@ class SiteController < ApplicationController
   	@beverages = Food.where(food_type: 'Beverages')
   	@beers = Food.where(food_type: 'Beers')
   end
+  def adm
+  end
+  def login
+  end
 end
