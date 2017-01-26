@@ -1,6 +1,6 @@
 <%= form_for(admin) do |f| %>
   <% if admin.errors.any? %>
-<% @admin.errors.full_messages.each do |message| %>
+<% admin.errors.full_messages.each do |message| %>
       <li><%= message %></li>
     <% end %>
   <% end %>

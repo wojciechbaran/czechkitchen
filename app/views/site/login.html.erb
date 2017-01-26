@@ -1,6 +1,7 @@
 <section id="intro" class="main">
 <h1>Login</h1>
-<%= form_tag("/site/adm", method: "GET") do %>
+<p id="error"><%= params[:notice] %></p>
+<%= form_tag("/site/confirm", method: "POST") do %>
 
 <div class="field">
     <%= label_tag(:login, "Login") %>

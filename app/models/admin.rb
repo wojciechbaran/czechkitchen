@@ -8,10 +8,12 @@ class Admin < ApplicationRecord
 
 	before_save :encrypt_password
 	after_save :clear_password
+
+
 	def encrypt_password
 		if password.present?
 			require 'digest/sha1'
-			encrypted_password= Digest::SHA1.hexdigest(password)
+			self.encrypted_password = Digest::SHA1.hexdigest(password)
 		end
 	end
 	def clear_password

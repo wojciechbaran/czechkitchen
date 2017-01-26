@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
   get 'site/login'
-
   get 'site/adm'
   get 'site/index'
   get 'site/menu'
+  post 'site/confirm'
 
   get 'orders/showadmin'
   get 'orders/starters'

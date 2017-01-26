@@ -4,57 +4,57 @@
   <tr>
     <th colspan="2" style= "background-color: #7a6652;color: #fff;">Starters</th>
   </tr>
-  <tr>
     <% @starters.each do |food| %>
+    <tr>
     <td><%= food.name %></td>
     <td><%= food.price %> Kc</td>
+    </tr>
     <% end %>
-  <tr>
     <tr>
     <th colspan="2" style= "background-color: #7a6652;color: #fff;">Soups</th>
   </tr>
-  <tr>
     <% @soups.each do |food| %>
+    <tr>
     <td><%= food.name %></td>
     <td><%= food.price %> Kc</td>
+    </tr>
     <% end %>
-  <tr>
     <tr>
     <th colspan="2" style= "background-color: #7a6652;color: #fff;">Main Courses</th>
   </tr>
-  <tr>
     <% @courses.each do |food| %>
+    <tr>
     <td><%= food.name %></td>
     <td><%= food.price %> Kc</td>
+    </tr>
     <% end %>
-  <tr>
     <tr>
     <th colspan="2" style= "background-color: #7a6652;color: #fff;">Desserts</th>
   </tr>
-  <tr>
     <% @desserts.each do |food| %>
+    <tr>
     <td><%= food.name %></td>
     <td><%= food.price %> Kc</td>
+    </tr>
     <% end %>
-  <tr>
     <tr>
     <th colspan="2" style= "background-color: #7a6652;color: #fff;">Beverages</th>
   </tr>
-  <tr>
     <% @beverages.each do |food| %>
+    <tr>
     <td><%= food.name %></td>
     <td><%= food.price %> Kc</td>
+    </tr>
     <% end %>
-  <tr>
     <tr>
     <th colspan="2" style= "background-color: #7a6652;color: #fff;">Beers</th>
   </tr>
-  <tr>
     <% @beers.each do |food| %>
+    <tr>
     <td><%= food.name %></td>
     <td><%= food.price %> Kc</td>
-    <% end %>
-  <tr>  
+    </tr>
+    <% end %> 
 
   </table>
   <%= link_to 'Back', root_url, class: "button big"%>

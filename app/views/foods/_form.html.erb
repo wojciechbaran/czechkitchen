@@ -1,6 +1,6 @@
 <%= form_for(food) do |f| %>
   <% if food.errors.any? %>
-  <% @admin.errors.full_messages.each do |message| %>
+  <% food.errors.full_messages.each do |message| %>
       <li><%= message %></li>
     <% end %>
   <% end %>
